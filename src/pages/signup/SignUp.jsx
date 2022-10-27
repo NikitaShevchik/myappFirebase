@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../hooks/use-auth';
 import { setUser } from '../../redux/user/userSlice';
 
-const Login = () => {
+const SignUp = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('')
     const dispatch = useDispatch()
@@ -37,11 +37,11 @@ const Login = () => {
                 <input type="email" placeholder="email" value={email} onChange={event => setEmail(event.target.value)} />
                 <input type="password" placeholder="password" value={password} onChange={event => setPassword(event.target.value)} />
                 <button onClick={() => signUp('sign')}>
-                    Log in
+                    Register
                 </button>
             </div >
         </div>
     )
 }
 
-export default Login
+export default SignUp;

@@ -9,7 +9,7 @@ import Header from "./components/elements/header/Header";
 import Home from "./pages/home/Home";
 import Footer from "./components/elements/footer/Footer";
 import styles from './App.module.scss';
-import Login from "./pages/login/Login";
+import SignUp from "./pages/signup/SignUp";
 
 function App() {
 
@@ -19,7 +19,7 @@ function App() {
             <Header />
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/login" element={<Login />} />
+                <Route path="/signup" element={<SignUp />} />
             </Routes>
             <Footer />
         </div>
