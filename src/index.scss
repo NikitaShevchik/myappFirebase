@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  max-width: 800px;
+  max-width: 1000px;
 }
 
 code {
@@ -13,4 +13,8 @@ code {
     monospace;
 }
 
+button{
+  cursor: pointer;
+  border: none;
+}
 
