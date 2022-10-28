@@ -10,6 +10,7 @@ import Home from "./pages/home/Home";
 import Footer from "./components/elements/footer/Footer";
 import styles from './App.module.scss';
 import SignUp from "./pages/signup/SignUp";
+import Login from "./pages/login/Login";
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/signup" element={<SignUp />} />
+                <Route path="/login" element={<Login />} />
             </Routes>
             <Footer />
         </div>
