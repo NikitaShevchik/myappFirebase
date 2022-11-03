@@ -1,11 +1,13 @@
 .login{
+    position: relative;
     width: 500px;
     height: 600px;
     margin: 0 auto;
     &__body{
+        position: relative;
+        z-index: 1;
         background-color: #28292d;
         width: 100%;
-        border: 1px solid #45f3ff;
         height: 100%;
         border-radius: 15px;
     }
@@ -20,11 +22,13 @@
     }
     &__title{
         font-size: 40px;
+        padding: 0 0 60px 0;
     }
     &__inputs{
         display: flex;
         flex-direction: column;
         width: 100%;
+        padding: 0 0 40px 0;
     }
     &__input{
         width: 100%;
@@ -33,20 +37,64 @@
         border: none;
         border-bottom: 3px solid #45f3ff;
         padding: 5px 10px;
-        &:active{
+        margin: 30px 0;
+        color: #fff;
+        &:active, &:hover, &:focus{
+            outline: none !important;
+            outline-offset: none !important;
             background-color: transparent;
         }
+        
     }
     &__buttons{
         width: 100%;
     }
     &__button{
         outline: none;
-        font-size: 20px;
-        padding: 10px 30px;
+        padding: 15px 40px;
         background-color: #45f3ff;
         border-radius: 10px;
-        font-size: 30px;
+        font-size: 26px;
     }
 }
 
+.box{
+    width: 502px;
+    height: 602px;
+    background-color: #28292d;
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    border-radius: 15px;
+    overflow: hidden;
+    &::before{
+        content: '';
+        position: absolute;
+        width: 500px;
+        height: 400px;
+        top: 50%;
+        left: 50%;
+        transform-origin: top left;
+        background: linear-gradient(0deg, transparent, transparent, #45f3ff);
+        animation: animate 8s infinite linear;
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        width: 600px;
+        height: 500px;
+        bottom: 50%;
+        right: 50%;
+        transform-origin: bottom right;
+        background: linear-gradient(0deg, #45f3ff, transparent, transparent);
+        animation: animate 8s infinite linear;
+    }
+}
+@keyframes animate {
+    0%{
+        rotate: (0deg);
+    }
+    100%{
+        rotate: (360deg);
+    }
+}

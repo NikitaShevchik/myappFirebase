@@ -45,15 +45,15 @@ const Login = () => {
 
     return (
         <div className={styles.login}>
-            < div className={styles.login__body}>
+            <div className={styles.login__body}>
                 <div className={styles.login__content}>
                     <div className={styles.login__form}>
                         <div className={styles.login__title}>
                             Log in
                         </div>
                         <div className={styles.login__inputs}>
-                            <input className={styles.login__input} type="email" placeholder="email..." value={email} onChange={event => setEmail(event.target.value)} />
-                            <input className={styles.login__input} type="password" placeholder="password..." value={password} onChange={event => setPassword(event.target.value)} />
+                            <input className={styles.login__input} type="email" placeholder="Email..." value={email} onChange={event => setEmail(event.target.value)} />
+                            <input className={styles.login__input} type="password" placeholder="Password..." value={password} onChange={event => setPassword(event.target.value)} />
                         </div>
                         <div className={styles.login__buttons}>
                             <button onClick={() => login()} className={styles.login__button}>
@@ -62,7 +62,9 @@ const Login = () => {
                         </div>
                     </div>
                 </div>
-            </div >
+            </div>
+            <div className={styles.box}>
+            </div>
         </div>
     )
 }
