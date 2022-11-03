@@ -1,0 +1,101 @@
+.signup{
+    position: relative;
+    width: 500px;
+    height: 600px;
+    margin: 0 auto;
+    &__body{
+        position: relative;
+        z-index: 1;
+        background-color: #28292d;
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+    }
+    &__content{
+        padding: 50px 60px;
+    }
+    &__form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__title{
+        font-size: 40px;
+        padding: 0 0 60px 0;
+        color: #c1fbff;
+    }
+    &__inputs{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0 0 40px 0;
+    }
+    &__input{
+        width: 100%;
+        font-size: 30px;
+        background-color: transparent;
+        border: none;
+        border-bottom: 3px solid #c1fbff;
+        padding: 5px 10px;
+        margin: 30px 0;
+        color: #fff;
+        &:active, &:hover, &:focus{
+            outline: none !important;
+            outline-offset: none !important;
+            background-color: transparent;
+        }
+        
+    }
+    &__buttons{
+        width: 100%;
+    }
+    &__button{
+        outline: none;
+        padding: 15px 40px;
+        background-color: #c1fbff;
+        border-radius: 10px;
+        font-size: 26px;
+    }
+}
+
+.box{
+    width: 502px;
+    height: 602px;
+    background-color: #28292d;
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    border-radius: 15px;
+    overflow: hidden;
+    &::before{
+        content: '';
+        position: absolute;
+        width: 500px;
+        height: 400px;
+        top: 50%;
+        left: 50%;
+        transform-origin: top left;
+        background: linear-gradient(0deg, transparent, transparent, #c1fbff);
+        animation: animate 8s infinite linear;
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        width: 600px;
+        height: 500px;
+        bottom: 50%;
+        right: 50%;
+        transform-origin: bottom right;
+        background: linear-gradient(0deg, #c1fbff, transparent, transparent);
+        animation: animate 8s infinite linear;
+    }
+}
+@keyframes animate {
+    0%{
+        rotate: (0deg);
+    }
+    100%{
+        rotate: (360deg);
+    }
+}

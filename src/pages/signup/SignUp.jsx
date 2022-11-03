@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../hooks/use-auth';
 import { setUser } from '../../redux/user/userSlice';
+import styles from './SignUp.module.scss'
 
 const SignUp = () => {
     const [email, setEmail] = useState('');
@@ -30,14 +31,27 @@ const SignUp = () => {
     }
 
     return (
-        <div>
-            < div >
-                <input type="email" placeholder="email..." value={email} onChange={event => setEmail(event.target.value)} />
-                <input type="password" placeholder="password..." value={password} onChange={event => setPassword(event.target.value)} />
-                <button onClick={() => signUp('sign')}>
-                    Register
-                </button>
-            </div >
+        <div className={styles.signup}>
+            <div className={styles.signup__body}>
+                <div className={styles.signup__content}>
+                    <div className={styles.signup__form}>
+                        <div className={styles.signup__title}>
+                            Sign up
+                        </div>
+                        <div className={styles.signup__inputs}>
+                            <input className={styles.signup__input} type="email" placeholder="Email..." value={email} onChange={event => setEmail(event.target.value)} />
+                            <input className={styles.signup__input} type="password" placeholder="Password..." value={password} onChange={event => setPassword(event.target.value)} />
+                        </div>
+                        <div className={styles.signup__buttons}>
+                            <button onClick={() => signUp('sign')} className={styles.signup__button}>
+                                Register
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className={styles.box}>
+            </div>
         </div>
     )
 }
