@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../hooks/use-auth';
 import { setUser } from '../../redux/user/userSlice';
+import styles from './Login.module.scss'
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -43,13 +44,24 @@ const Login = () => {
     }
 
     return (
-        <div>
-            < div >
-                <input type="email" placeholder="email..." value={email} onChange={event => setEmail(event.target.value)} />
-                <input type="password" placeholder="password..." value={password} onChange={event => setPassword(event.target.value)} />
-                <button onClick={() => login()}>
-                    Log in
-                </button>
+        <div className={styles.login}>
+            < div className={styles.login__body}>
+                <div className={styles.login__content}>
+                    <div className={styles.login__form}>
+                        <div className={styles.login__title}>
+                            Log in
+                        </div>
+                        <div className={styles.login__inputs}>
+                            <input className={styles.login__input} type="email" placeholder="email..." value={email} onChange={event => setEmail(event.target.value)} />
+                            <input className={styles.login__input} type="password" placeholder="password..." value={password} onChange={event => setPassword(event.target.value)} />
+                        </div>
+                        <div className={styles.login__buttons}>
+                            <button onClick={() => login()} className={styles.login__button}>
+                                Login
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div >
         </div>
     )
