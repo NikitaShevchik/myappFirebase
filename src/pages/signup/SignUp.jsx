@@ -40,7 +40,10 @@ const SignUp = () => {
                         </div>
                         <div className={styles.signup__inputs}>
                             <input className={styles.signup__input} type="email" placeholder="Email..." value={email} onChange={event => setEmail(event.target.value)} />
-                            <input className={styles.signup__input} type="password" placeholder="Password..." value={password} onChange={event => setPassword(event.target.value)} />
+                            <input className={styles.signup__input_password} type="password" placeholder="Password..." value={password} onChange={event => setPassword(event.target.value)} />
+                            <div className={styles.signup__login}>
+                                <p onClick={() => navigate('/login')}>Already have an account?</p>
+                            </div>
                         </div>
                         <div className={styles.signup__buttons}>
                             <button onClick={() => signUp('sign')} className={styles.signup__button}>
